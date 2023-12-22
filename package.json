@@ -1,0 +1,17 @@
+{
+  "name": "hospital_site",
+  "version": "1.0.0",
+  "description": "Hospital Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Huzaifa Ahmad",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.2"
+  }
+}
