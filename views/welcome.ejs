@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <link rel="stylesheet" href="/css/styleW.css">
+</head>
+<body>
+    <% if(userLogin.field=="Patient"){ %>
+        <h1 class="main-head">Welcome <%= userLogin.name %></h1>
+        <div class="main">
+            <h1 class="head">Thank You </h1>
+            <p>-your appointment with Dr.<%= userLogin.doctor %> has been confirmed.</p>
+        </div>
+    <% } else { %>
+        <div class="main">
+            <h1 class="head">Thank You </h1>
+            <h1 class="main-head">Welcome <%= userLogin.field %> <%= userLogin.name %></h1>
+            <p>-you may now Proceed.</p>
+        </div>
+    <% } %>
+</body>
+</html>

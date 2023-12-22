@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <title class="title">Doctor Select</title>
+</head>
+<body>
+    <div class="maindiv">
+        <form action="/doct" method="post" id="redirectForm">
+            <div class="inp-fields">
+                <h3 class="field-head"><label class="inp-label" for="doctor-select"  id="doctorNameLabel">Choose Available Doctor:</label></h3>
+                <select id="doctor-select" name="doctor">
+                    <% newDoctors.forEach(function(doctor) { %>
+                        <option value="<%= doctor.name %>"><%= doctor.name %> ( <%= doctor.spe %> )</option>
+                    <% }); %>
+                </select>
+                <br>
+            </div>
+                <input type="submit" value="Select" class="submit-btn" id="doct-submit">
+        </form>
+    </div>
+    <script>
+        const subButton=document.querySelector("#doct-submit");
+        subButton.addEventListener("click",function(el){
+            localStorage.setItem('buttonClicked', "true");
+        });
+    </script>
+</body>
+</html>
