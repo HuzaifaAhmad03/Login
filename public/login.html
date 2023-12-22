@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <title class="title">Login</title>
+</head>
+<body>
+    <div class="maindiv">
+        <form action="/login" method="post">
+            <div class="fields">
+                <h2>Login as:</h2>
+                <input type="checkbox" name="doctor" id="doc" class="chkbox">
+                <label class="inp-field" for="doc">Doctor</label>
+                <input type="checkbox" name="admin" id="adm" class="chkbox">
+                <label class="inp-field" for="adm">Admin</label>
+                <input type="checkbox" name="patient" id="pat" class="chkbox" checked>
+                <label class="inp-field" for="pat">Patient</label>
+            </div>
+            <h2 class="field-head">Patient Login:</h2>
+            <div class="inp-fields container">
+                <label class="inp-label" for="uid">Patient ID:</label>
+                <input type="text" name="userID" id="uid" placeholder="Enter your UserID" autocomplete="off">
+                <label class="inp-label" for="nam">Patient Name:</label>
+                <input type="text" name="name" id="nam" placeholder="Enter your UserID" autocomplete="off">
+                <input type="hidden" name="field" id="fie" value="Patient"><br>
+                <input type="submit" value="Log In" class="submit-btn" id="login-btn">
+            </div>
+        </form>
+    </div>
+    <script>
+        const subButton=document.querySelector("#login-btn");
+        subButton.addEventListener("click",function(el){
+            if(document.querySelector("#fie")!="Patient"){
+                localStorage.setItem('buttonClicked', "true");
+            }
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/index1.js"></script>
+</body>
+</html>
+

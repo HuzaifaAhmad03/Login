@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <title class="title">Register</title>
+</head>
+<body>
+    <div class="maindiv">
+        <form action="/register" method="post" onsubmit="return check()" novalidate>
+            <br>
+            <div class="inp-fields">
+                <h2>New User? Register here:</h2>
+                <h2 class="field-head" name="heading">Patient Register</h2>
+                <label class="inp-label" for="nam">Name:</label>
+                <input type="text" name="name" id="nam" autocomplete="off" placeholder="Enter your Name"><br>
+                <label class="inp-label" for="ema">Email:</label>
+                <input type="email" name="email" id="ema" autocomplete="off" placeholder="Enter your Email"><br>
+                <div id="cmail" class="emsg"></div>
+                <label class="inp-label" for="adh">Adhaar:</label>
+                <input type="text" name="adhaar" id="adh" pattern="[1-9]{12}" maxlength="12" minlength="12" autocomplete="off" placeholder="Enter your Adhaar(12-digit)"><br>
+                <div id="cadhr" class="emsg"></div>
+                <label class="inp-label" for="con">Contact No.:</label>
+                <input type="text" name="contact" id="con" pattern="[6-9]{1}[0-9]{9}" autocomplete="off" placeholder="Start with 6/7/8/9"><br>
+                <div id="ccont" class="emsg"></div>
+                <label class="inp-label" for="app">Appointment:</label>
+                <input type="date" name="appointment_spe_dept" id="app" autocomplete="off">
+                <input type="hidden" name="field" id="fie" value="Patient">
+                <br>
+            </div>
+                <input type="submit" value="Submit" class="submit-btn">
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/index2.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0px;
+}
+
+  
+.frame{
+    padding: 20px;
+    background-color: white;
+}
+
+iframe{
+    width: 100vh;
+    height: 100vh;
+    border: none;
+}
+
+  
+.frame1{
+    background-image: -webkit-linear-gradient(0deg, rgb(231, 173, 255) 10%, rgb(248, 248, 255) 50%);
+}  
+.frame2{
+    background-image: -webkit-linear-gradient(0deg, rgb(248, 248, 255) 20%, rgb(231, 173, 255) 40%);
+}
+  
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+input{
+    padding: 0.5rem;
+    border: 0.5px solid black;
+    border-radius: 5px;
+}
+input:hover{
+    box-shadow: 0px 0px 5px 0px rgb(21, 0, 62);
+}
+
+.inp-label{
+    display: block;
+}
+.maindiv{
+    padding: 15%;
+    align-content: center;
+    border-radius: 20px;
+    background-color: white;
+    margin: 10%;
+    margin-left: 10%;
+    box-shadow: 0px 0px 20px 5px black;
+    width: 90%;
+}
+
+.maindiv:hover{
+    box-shadow: 0px 0px 40px 5px black;
+}
+
+.fields{
+    margin-bottom: 10%;
+}
+
+.inp-fields{
+    padding-bottom: 1%;
+}
+
+.submit-btn{
+    background-color: rgb(240, 239, 255);
+    padding: 5%;
+    margin: 5%;
+}
+
+.emsg{
+    margin-bottom: 0.5%;
+    font-size: smaller;
+    color: red;
+}
+
+input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+}
+input[type="checkbox"] + label,input[type="checkbox"]:checked{
+    background-color: rgb(240, 239, 255);
+    padding: 3%;
+    border-radius: 20px;
+    margin: 2%;
+  }
+input[type="checkbox"]:checked + label,input[type="checkbox"]:checked{
+    background-color: rgb(235, 194, 253);
+}
+
+
+
+@media (min-width: 980px) and (max-width: 1279px){
+    .maindiv{
+        align-content: center;
+        border-radius: 20px;
+        background-color: white;
+        margin-left: 10%;
+        height: 120%;
+        width: 120%;
+        font-size: 3vh;
+    }
+    input[type="submit"],input[type="text"],input[type="email"],input[type="number"],input[type="date"]{
+        font-size: 3vh;
+    }
+    input[type="checkbox"]{
+        height:2.7vh;
+        width: 2.7vh;
+    }
+    #doctor-select{
+        font-size: 3vh;
+        margin-top: 1px;
+        margin-bottom: 10px;
+    }
+    option{
+        font-size: 2vh;
+    }
+    .frame2 {
+        background-image: -webkit-linear-gradient(0deg, rgb(231, 173, 255) 10%, rgb(248, 248, 255) 50%);
+    }
+    .container {
+        grid-template-columns: 100%;
+    }
+    .frame {
+        width: 100vh;
+        height: 100vh;
+        flex: 1;
+        min-width: 0;
+      }
+}
